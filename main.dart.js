@@ -67113,7 +67113,7 @@ vc:function(){var s=0,r=P.E(t.b),q,p,o,n
 var $async$vc=P.z(function(a,b){if(a===1)return P.B(b,r)
 while(true)switch(s){case 0:P.m("I am click on callOnFcmApiSendPushNotifications")
 p=t.X
-o=P.S(["to","e-VvdQr7VPmK6zeiKdDO3q:APA91bF6jxEQHM48pqjoaeJm_X10SIbDmWXBNKS1fAkwwVnMP5QcUirqd5eHY3kKpTUKw-5cwNEKinL-zqM4fR50r5z_tEHXg8Qg_ENSqwUFqldYsdTd772JQDD_ZXMXgja6dOchTlo4","data",P.S(["title","NewTextTitle","body","NewTextBody","icon","https://shortcut-test2.s3.amazonaws.com/uploads/role_image/attachment/10461/thumb_image.jpg","link","https://yourapp.com/somewhere"],p,p)],p,t._)
+o=P.S(["to","e-VvdQr7VPmK6zeiKdDO3q:APA91bF6jxEQHM48pqjoaeJm_X10SIbDmWXBNKS1fAkwwVnMP5QcUirqd5eHY3kKpTUKw-5cwNEKinL-zqM4fR50r5z_tEHXg8Qg_ENSqwUFqldYsdTd772JQDD_ZXMXgja6dOchTlo4","data",P.S(["title","Utsav Pajave","body","Create flutter chat application","icon","https://shortcut-test2.s3.amazonaws.com/uploads/role_image/attachment/10461/thumb_image.jpg","link","https://yourapp.com/somewhere"],p,p)],p,t._)
 n=P.S(["content-type","application/json","Authorization","key=AAAA4_FB-k4:APA91bE3hriyydpYeNUCZlJtN8O70DZuMwnEyAtenYoZBZCUjIsq8x1gi-ow8RNK6Ano_3_2fJlaryOLwMdgm4otDedQHf6cdNvACazqQG1gB_9qgX6zLRzJE5UzEqXebsUM3DJT6YAR"],p,p)
 s=3
 return P.A(G.aKa("https://fcm.googleapis.com/fcm/send",C.b5.hU(o),P.aqI("utf-8"),n),$async$vc)
