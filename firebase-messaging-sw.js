@@ -1,11 +1,7 @@
-importScripts("https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/7.15.1/firebase-messaging.js");
-importScripts("https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js");
-
-
-
+importScripts("https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js");
+importScripts("https://www.gstatic.com/firebasejs/7.5.0/firebase-messaging.js");
 firebase.initializeApp({
-   apiKey: "AIzaSyBKfsEDGiXmo9QdVNEzJw4FMu2L2uAzOoY",
+  apiKey: "AIzaSyBKfsEDGiXmo9QdVNEzJw4FMu2L2uAzOoY",
       authDomain: "flutterchat-57297.firebaseapp.com",
       databaseURL: "https://flutterchat-57297.firebaseio.com",
       projectId: "flutterchat-57297",
@@ -14,16 +10,10 @@ firebase.initializeApp({
       appId: "1:979005209166:web:24eb3569a9b672c9e9a11f",
       measurementId: "G-57NFYLVN72"
 });
-  firebase.analytics();
 const messaging = firebase.messaging();
 
-messaging.onMessage((payload) => {
-  console.log('Message received. ', payload);
-
-
-});
 messaging.setBackgroundMessageHandler(function (payload) {
-console.log('[firebase-messaging-sw.js] Received background message ', payload);
+console.log('setBackgroundMessageHandler received: ', payload)
     const promiseChain = clients
         .matchAll({
             type: "window",
@@ -36,15 +26,16 @@ console.log('[firebase-messaging-sw.js] Received background message ', payload);
             }
         })
         .then(() => {
-            const title = payload.notification.title;
-            const options = {
-                body: payload.notification.score
-              };
-            return registration.showNotification(title, options);
+           // return registration.showNotification("New Message");
+             return self.registration.showNotification(payload.data.title, {
+               body: payload.data.body,
+               icon: payload.data.icon,
+               tag: payload.data.tag,
+               data: payload.data.link
+             });
         });
     return promiseChain;
 });
 self.addEventListener('notificationclick', function (event) {
     console.log('notification received: ', event)
 });
-
