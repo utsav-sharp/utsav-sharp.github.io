@@ -67470,16 +67470,14 @@ eh:function(a,b){var s,r,q,p,o,n,m,l,k=this,j="[DEFAULT]",i="messages",h="I am d
 P.l("type utsav123==> "+b+" and "+H.b(a)+" and "+H.b(k.x1)+" and "+k.db+"  and "+H.b(k.ch)+" and "+k.cx)
 P.l("userOnlineOffline onSendMessage ==> "+H.b(k.e))
 if(b===0&&k.e==="Active"){P.l("callOnFcmApiSendPushNotifications condition")
-s=k.fy
-k.kk(a,s)}else if(b===1&&k.e==="Active"){s=k.fy
-k.kk("Photo",s)}else if(b===2&&k.e==="Active"){s=k.fy
-k.kk("Sticker",s)}else{s=b===3&&k.e==="Active"
-r=k.fy
+k.kk(a,k.x)}else if(b===1&&k.e==="Active")k.kk("Photo",k.x)
+else if(b===2&&k.e==="Active")k.kk("Sticker",k.x)
+else{s=b===3&&k.e==="Active"
+r=k.x
 if(s)k.kk("Pdf",r)
-else k.kk("Docx",r)
-s=r}if(b===2)k.x1=!1
+else k.kk("Docx",r)}if(b===2)k.x1=!1
 if(a!=="")if(b===10)k.K(new U.X2(k,a,b))
-else{P.l("I am in check replayMessage message "+H.b(k.ch)+" and "+k.Q+" and "+H.b(s)+" and "+k.cx)
+else{P.l("I am in check replayMessage message "+H.b(k.ch)+" and "+k.Q+" and "+H.b(k.fy)+" and "+k.cx)
 k.r2.j0(0,C.pI)
 q=k.ch
 p=k.cx
